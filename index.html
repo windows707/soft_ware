@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win_dows PC Soft_ware</title>
+    <style>
+
+        <!-- Logo container -->
+        <div class="logo-container">
+            <div class="logos">
+                <img src="logo1.png" alt="Logo 1" class="logo">
+                <img src="logo2.png" alt="Logo 2" class="logo">
+                <img src="logo3.png" alt="Logo 3" class="logo">
+                <!-- Add more logos as needed -->
+                animation: glowing 10s infinite alternate; /* Glowing effect added here */
+            </div>
+            <button class="buy-button">Buy All Software</button>
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Panel</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(100px);
+            box-shadow: 0 0 100px rgba(0, 150, 255, 0.5);
+        }
+
+        .nav-icons {
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons img {
+            width: 20px;
+            height: auto;
+            margin-right: 0px;
+            margin-bottom: 5px;
+        }
+
+        .search-box {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input[type="text"] {
+            padding: 0.9rem;
+            width: 70%;
+            max-width: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 0rem;
+        }
+
+        .discount-message {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .latest {
+            margin-bottom: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 1rem;
+            border: yellow;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Updated for mobile view */
+            justify-content: space-between; /* Adjusted for mobile view */
+            align-items: center; /* Center items */
+        }
+
+        /* Proof button styling */
+        .proof-button {
+    background-color: #1d0016;
+    color: rgb(228, 213, 0);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%; /* Full width for buttons */
+    margin-top: 0.5rem; /* Spacing between buttons */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.5s ease; /* Increased duration for smoother effect */
+
+    /* Default state */
+    transform: scale(1);
+}
+
+.proof-button:hover {
+    /* Zoom in effect on hover */
+    transform: scale(1.1);
+}
+        
+        /* Get All Software styling */
+        .get-all {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            width: 100%; /* Full width for the button */
+            max-width: 300px; /* Maximum width to prevent stretching */
+            margin: 0.5rem auto; /* Center alignment */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Make it a block element to use margin auto */
+            text-align: center; /* Center the text inside the button */
+            transition: transform 0.3s ease; /* Animation for hover */
+        }
+
+        /* Hover effect */
+        .get-all:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+            background-color: darkblue; /* Change background color on hover */
+        }       
+
+        /* Parent container styling */
+        .container {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the button horizontally */
+            align-items: center; /* Center the button vertically */
+            height: 100vh; /* Full viewport height for vertical centering */
+        }
+
+        /* Windows Logo Styling */
+        .windows-logo {
+            width: 150px;        /* Width ko 100px set kiya */
+            height: auto;        /* Height ko auto set kiya, taaki aspect ratio maintain ho */
+            vertical-align: top;
+             margin-top: 20px;    /* Top margin */
+        }
+
+        
+        /* Software Logo Styling */
+        .software-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Bundle Plan Text with Gradient Background */
+        .bundle-plan {
+            display: block; /* Ensures it behaves as a block-level element */
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: black; /* Change text color to black */
+            padding: 1rem;
+            background: linear-gradient(90deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1), rgba(0, 255, 0, 1), rgba(255, 255, 0, 1)); /* RGB Gradient Background */
+            border-radius: 8px; /* کوनों کو گول کرنے کے لیے */
+            width: fit-content; /* Width based on content */
+            margin-left: auto; /* Centering */
+            margin-right: auto; /* Centering */
+        }
+        
+        /* Buy All Text with Gradient Background */
+        .buy-all {
+            display: block; /* Ensures it behaves as a block-level element */
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: black; /* Change text color to black */
+            padding: 1rem;
+            background: linear-gradient(90deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1), rgba(0, 255, 0, 1), rgba(255, 255, 0, 1)); /* RGB Gradient Background */
+            border-radius: 8px; /* کوनों کو گول کرنے کے لیے */
+            width: fit-content; /* Width based on content */
+            margin-left: auto; /* Centering */
+            margin-right: auto; /* Centering */
+        }
+        
+        /* WhatsApp and Telegram logo positioning */
+        .social-icons {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .search-box input[type="text"] {
+                width: 100%;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item {
+                padding: 1rem; /* Adjust padding for mobile */
+            }
+        }
+    <style>
+        /* Default style for desktop */
+        .offer-text p {
+            font-size: 100px;
+            font-weight: bold;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .offer-text p {
+                font-size: 15px;  /* Smaller text for mobile */
+            }
+        }
+    <head>
+    <style>
+        /* Default style for mobile (smaller text) */
+        .offer-text p {
+            font-size: 20px;  /* Smaller text for mobile */
+            font-weight: bold;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 769px) {
+            .offer-text p {
+                font-size: 30px;  /* Larger text for desktop */
+            }
+        }
+
+        /* Optional: For very large screens, you can increase font size even more */
+        @media (min-width: 1200px) {
+            .offer-text p {
+                font-size: 40px;  /* Larger text for very big screens */
+            }
+        }
+    <head>
+    <style>
+        /* Default style for mobile (smaller text) */
+        .offer-text p {
+            font-size: 20px;  /* Smaller text for mobile */
+            font-weight: bold;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 769px) {
+            .offer-text p {
+                font-size: 30px;  /* Larger text for desktop */
+            }
+        }
+
+        /* Optional: For very large screens, you can increase font size even more */
+        @media (min-width: 1200px) {
+            .offer-text p {
+                font-size: 40px;  /* Larger text for very big screens */
+            }
+        }
+
+        /* Red color for the 99% text */
+        .offer-text span {
+            color: red;
+        }
+    <head>
+    <style>
+        /* Default style for mobile (slightly larger text) */
+        .offer-text p {
+            font-size: 18px;  /* Slightly larger text for mobile */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .offer-text span {
+            font-weight: bold; /* Make span text bold */
+            font-size: 18px;  /* Slightly larger text for span */
+        }
+
+        /* Desktop styles */
+        @media (min-width: 769px) {
+            .offer-text p {
+                font-size: 28px;  /* Larger text for desktop */
+            }
+
+            .offer-text span {
+                font-size: 28px;  /* Larger text for span on desktop */
+            }
+        }
+
+        /* Optional: For very large screens, you can increase font size even more */
+        @media (min-width: 1200px) {
+            .offer-text p {
+                font-size: 32px;  /* Larger text for very big screens */
+            }
+
+            .offer-text span {
+                font-size: 32px;  /* Larger text for span on large screens */
+            }
+        }
+
+        /* Red color for the 99% text */
+        .offer-text span.percent {
+            color: red; /* Red color for the 99% text */
+        }
+
+        /* Blue color for the Premium Access text */
+        .offer-text span.premium-access {
+            color: yellow; /* Blue color for Premium Access text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-icons">
+            <a href="#" class="link android">
+                <img src="android-logo.png" alt="Android Logo" class="icon android-logo">
+            </a>
+        </div>
+        
+        <!-- New Text Added Here -->
+        <div class="offer-text" style="text-align: center; width: 100%; margin: 10px 0;">
+            <p>All software at <span class="percent">99%</span> off the official price + Lifetime <span class="premium-access">Premium Access</span></p>
+        </div>
+        
+        <div class="nav-icons" style="margin-left: auto;">
+            <a href="##############################################################################################" class="link mac">
+                <img src="apple-logo.png" alt="Apple Logo" class="icon apple-logo">
+            </a>
+        </div>
+    </header>
+</body>
+
+
+<style>
+    /* लाइन हटाने के लिए */
+    a {
+        text-decoration: none;
+    }
+
+    /* बोल्ड और ब्लैक टेक्स्ट */
+    .text {
+        font-weight: bold; /* टेक्स्ट बोल्ड */
+        color: black; /* टेक्स्ट का रंग काला */
+    }
+
+    /* एनिमेशन के लिए */
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Hover एनिमेशन दोनों के लिए */
+    .link:hover .icon,
+    .link:hover .text {
+        transform: scale(1.1); /* हल्का बड़ा करने की एनिमेशन */
+        transition: transform 50s ease; /* स्मूथ ट्रांज़िशन */
+    }
+</style>
+        </div>
+        <section class="latest">
+            <h2>
+                <img src="windows-logo.png" alt="Windows Logo" class="windows-logo">
+            </h2>
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Panel</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Centered Text Styling */
+        .centered-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            color: black;
+            background: linear-gradient(90deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1), rgba(0, 255, 0, 1), rgba(255, 255, 0, 1));
+            border-radius: 8px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+
+        .logo-container img {
+            width: 30px; /* Adjust size of logos */
+            height: 30px;
+        }
+        
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Main Content Section -->
+    <main>
+        <!-- Buy All Bundle Plans Section -->
+        <div class="centered-text">Buy Now! Bundle Plans at Half Price – Only ₹395</div>
+        
+        <!-- Logo Container with Two Rows -->
+        <div class="logo-container">
+            <!-- First Row of Logos -->
+            <div class="logo-row">
+                <img src="premiere-logo.svg" alt="Logo 1" class="random-glow-logo">
+                <img src="aftereffects-logo.svg" alt="Logo 2" class="random-glow-logo">
+                <img src="photoshop-logo.svg" alt="Logo 3" class="random-glow-logo">
+                <img src="filmora-logo.svg" alt="Logo 4" class="random-glow-logo">
+                <img src="mediaencoder-logo.svg" alt="Logo 5" class="random-glow-logo">
+            </div>
+            
+            <!-- Second Row of Logos -->
+            <div class="logo-row">
+                <img src="audition-logo.svg" alt="Logo 6" class="random-glow-logo">
+                <img src="lightroom-logo.svg" alt="Logo 7" class="random-glow-logo">
+                <img src="illustrator-logo.svg" alt="Logo 8" class="random-glow-logo">
+                <img src="indesign-logo.svg" alt="Logo 9" class="random-glow-logo">
+                <img src="animate-logo.svg" alt="Logo 10" class="random-glow-logo">
+            </div>
+        </div>
+    </main>
+
+    <!-- Glowing Effect CSS -->
+    <style>
+        /* Mobile ke liye CSS */
+        @media only screen and (max-width: 767px) {
+            .logo-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px; /* Mobile ke liye gap */
+            }
+            
+            .logo-row {
+                display: flex;
+                gap: 8px; /* Mobile ke liye logo gap */
+            }
+            
+            .logo-row img {
+                max-width: 40px; /* Mobile ke liye logo size */
+                height: auto;
+            }
+        }
+
+        .random-glow-logo {
+            animation: randomGlow 10s infinite alternate;
+        }
+
+        /* Keyframes for Random Color and Brightness Animation */
+        @keyframes randomGlow {
+            0% {
+                filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 30px #ff0000);
+            }
+            25% {
+                filter: drop-shadow(0 0 15px #00ff00) drop-shadow(0 0 30px #00ff00);
+            }
+            50% {
+                filter: drop-shadow(0 0 20px #73ff00) drop-shadow(0 0 40px #73ff00);
+            }
+            75% {
+                filter: drop-shadow(0 0 25px #ffff00) drop-shadow(0 0 50px #ffff00);
+            }
+            100% {
+                filter: drop-shadow(0 0 30px #ff00ff) drop-shadow(0 0 60px #ff00ff);
+            }
+        }
+    </style>
+</body>
+
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Premiere Pro Logo */
+#softwareContainer .grid-item[data-software="Adobe Premiere Pro 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Premiere Pro 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+
+/* Animation for Glowing Effect */
+@keyframes glowing {
+    0% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 20px #ff0000) drop-shadow(0 0 30px #ff0000);
+    }
+    10% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #ff6600) drop-shadow(0 0 20px #ff6600) drop-shadow(0 0 30px #ff6600);
+    }
+    20% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #ffcc00) drop-shadow(0 0 20px #ffcc00) drop-shadow(0 0 30px #ffcc00);
+    }
+    30% {
+        filter: brightness(1) drop-shadow(0 0 10px #66ff00) drop-shadow(0 0 20px #66ff00) drop-shadow(0 0 30px #66ff00);
+    }
+    40% {
+        filter: brightness(1) drop-shadow(0 0 10px #00ff66) drop-shadow(0 0 20px #00ff66) drop-shadow(0 0 30px #00ff66);
+    }
+    50% {
+        filter: brightness(1) drop-shadow(0 0 10px #00ccff) drop-shadow(0 0 20px #00ccff) drop-shadow(0 0 30px #00ccff);
+    }
+    60% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #0066ff) drop-shadow(0 0 20px #0066ff) drop-shadow(0 0 30px #0066ff);
+    }
+    70% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #6600ff) drop-shadow(0 0 20px #6600ff) drop-shadow(0 0 30px #6600ff);
+    }
+    80% {
+        filter: brightness(1) drop-shadow(0 0 10px #ff00cc) drop-shadow(0 0 20px #ff00cc) drop-shadow(0 0 30px #ff00cc);
+    }
+    90% {
+        filter: brightness(1) drop-shadow(0 0 10px #ff0033) drop-shadow(0 0 20px #ff0033) drop-shadow(0 0 30px #ff0033);
+    }
+    100% {
+        filter: brightness(1) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 20px #ff0000) drop-shadow(0 0 30px #ff0000);
+    }
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Canva Pro Logo */
+#softwareContainer .grid-item[data-software="Canva Pro"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Canva Pro"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe After Effects Logo */
+#softwareContainer .grid-item[data-software="Adobe After Effects 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe After Effects 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Photoshop Logo */
+#softwareContainer .grid-item[data-software="Adobe Photoshop 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Photoshop 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Wondershare Filmora Logo */
+#softwareContainer .grid-item[data-software="Wondershare Filmora 14+Ai"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Wondershare Filmora 14+Ai"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Media Encoder Logo */
+#softwareContainer .grid-item[data-software="Adobe Media Encoder 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Media Encoder 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Audition Logo */
+#softwareContainer .grid-item[data-software="Adobe Audition 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Audition 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Lightroom Logo */
+#softwareContainer .grid-item[data-software="Adobe Lightroom 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Lightroom 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Illustrator Logo */
+#softwareContainer .grid-item[data-software="Adobe Illustrator 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Illustrator 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe inDesign Logo */
+#softwareContainer .grid-item[data-software="Adobe inDesign 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe inDesign 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Animate Logo */
+#softwareContainer .grid-item[data-software="Adobe Animate 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Animate 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+<!-- Glowing Effect CSS -->
+<style>
+    /* Glowing Effect for Adobe Character Animator Logo */
+#softwareContainer .grid-item[data-software="Adobe Character Animator 2025"] .software-logo {
+    transition: filter 2s ease-in-out; /* Smooth transition for color change */
+    animation: glowing 24s infinite alternate; /* Increased animation time to 15s */
+}
+
+#softwareContainer .grid-item[data-software="Adobe Character Animator 2025"] .software-logo:hover {
+    filter: brightness(1.5) drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f) drop-shadow(0 0 30px #00f);
+}
+</style>
+
+
+<!-- Popup Container -->
+<div id="popup-container" class="popup-container">
+    <div class="popup-content">
+        <span class="close-button" onclick="closePopup()">×</span>
+        <h2 id="popup-title">Software - Video Proof</h2>
+        <a id="popup-link-high" class="popup-link google-drive-high" target="_blank">Google Drive - High Quality</a>
+        <a id="popup-link-low" class="popup-link google-drive-low" target="_blank">Google Drive - Low Quality</a>
+        <a id="popup-link-telegram" class="popup-link telegram" target="_blank">Telegram</a>
+    </div>
+</div>
+
+<style>
+    /* Popup Container */
+    .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-container.active {
+        display: flex;
+    }
+
+    /* Popup Content */
+    .popup-content {
+        background: white;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        transform: scale(0.8);
+        opacity: 0;
+        animation: popupZoomIn 0.4s ease forwards;
+    }
+
+    .popup-container.fade-out .popup-content {
+        animation: popupZoomOut 0.4s ease forwards;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #444;
+    }
+
+    /* Default link color (Blue) */
+    .popup-link {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        text-decoration: none;
+        background: #007BFF; /* Blue color */
+        border-radius: 5px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .popup-link:hover {
+        background: #0056b3; /* Darker Blue */
+    }
+
+    /* Google Drive - High Quality (Green) */
+    .popup-link.google-drive-high {
+        background: #4CAF50; /* Green color */
+        color: #fff;
+    }
+
+    .popup-link.google-drive-high:hover {
+        background: #388E3C; /* Darker Green */
+    }
+
+    /* Google Drive - Low Quality (Yellow) */
+    .popup-link.google-drive-low {
+        background: #04d3d3; /* Yellow color */
+        color: #fff;
+    }
+
+    .popup-link.google-drive-low:hover {
+        background: #009999; /* Darker Yellow */
+    }
+
+    /* Telegram (Red) */
+    .popup-link.telegram {
+        background: #359fe5; /* Red color */
+        color: #fff;
+    }
+
+    .popup-link.telegram:hover {
+        background: #0084db; /* Darker Red */
+    }
+
+    /* Background Blur Effect */
+    body.blur-effect::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        pointer-events: none; /* Background interaction allowed */
+        opacity: 0;
+        animation: fadeInBackground 0.4s ease forwards;
+    }
+
+    body.fade-out::before {
+        animation: fadeOutBackground 0.4s ease forwards;
+    }
+
+    /* Smooth Animations */
+    @keyframes fadeInBackground {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOutBackground {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes popupZoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes popupZoomOut {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+    }
+</style>
+
+<script>
+    const popupContainer = document.getElementById("popup-container");
+    const popupTitle = document.getElementById("popup-title");
+    const popupLinkHigh = document.getElementById("popup-link-high");
+    const popupLinkLow = document.getElementById("popup-link-low");
+    const popupLinkTelegram = document.getElementById("popup-link-telegram");
+
+    function openPopup(softwareName) {
+        document.body.classList.add("blur-effect");
+        popupContainer.classList.add("active");
+
+        // Change content based on software
+        if (softwareName === 'Adobe Premiere Pro 2025') {
+            popupTitle.textContent = 'Premiere Pro - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1eRc7C8OLn8G9_vUHfZdj6GYnmGOhiZlL/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1E6-XW-2xXrRxAV1gVvDm5sirternqbRA/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Canva Pro') {
+            popupTitle.textContent = 'Canva Pro - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1FX4JNCe-wGxiYweYbfs8XSsPjkEQ89Ow/view?usp=drive_link';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1FX4JNCe-wGxiYweYbfs8XSsPjkEQ89Ow/view?usp=drive_link';
+            popupLinkTelegram.href = 'https://wa.me/message/MTTGHMIF7TNSC1';
+        } else if (softwareName === 'Adobe After Effects 2025') {
+            popupTitle.textContent = 'After Effects - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1aXcZIqaCbGMx6NiekI2N0YYqwEbqHu61/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1XheXKiFCF-nS2oHiOTfHaEXA_T07gDI_/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Photoshop 2025') {
+            popupTitle.textContent = 'Adobe Photoshop - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1dOMqodusSJ4A1HqOOcb4_3xgQQjSjHgD/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1va9CswdysDu3V4qw1d1vBcSsMoeLdnLC/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Wondershare Filmora 14+Ai') {
+            popupTitle.textContent = 'Wondershare Filmora - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1oIPcpLe3fIB8Xm08FOFPUsqlLA6kNqQ-/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1k2F3aSDjE_IhLn_g4-a4EwBeJiSliNWP/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Media Encoder 2025') {
+            popupTitle.textContent = 'Adobe Media Encoder - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1WjzfgAb44AISjKCgd1Ch8tI1zgGH0hd7/view?usp=drive_link';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1WjzfgAb44AISjKCgd1Ch8tI1zgGH0hd7/view?usp=drive_link';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Audition 2025') {
+            popupTitle.textContent = 'Adobe Audition - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/17jU0Ty1mIrJIOpya4y7aSWpbhbBJES6E/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1W5iDKWp0kuLtO5Qvw577b0AZhq4x9Tv6/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Lightroom 2025') {
+            popupTitle.textContent = 'Adobe Lightroom - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1n0RvMKDPmrCyJ4pIKsqf3zUX9JUw9RmT/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1lwWQ7l_8OpeovxCTyNI-l5IXaEx8F_xt/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Illustrator 2025') {
+            popupTitle.textContent = 'Adobe Illustrator - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1GfK2-kA2tHocA4b2_qjVqgEIRW-0Kk_N/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1mZuTPD24C1GIK35prfN5E8DlGR0MkS56/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe inDesign 2025') {
+            popupTitle.textContent = 'Adobe inDesign - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1tkciI3uM2ihNFSzoOr_yBPch_u-1T4Xd/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1XDIZMKmB8wF3JneZfsmTx-e6PVl99zZ7/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Animate 2025') {
+            popupTitle.textContent = 'Adobe Animate - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/1ROOoidJDQh9iVQHQ8Zru2uXDGZHKazE-/view';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1CGn-2RXWFqwv9gZSCejXJiO4Hs-12hJy/view';
+            popupLinkTelegram.href = '#';
+        } else if (softwareName === 'Adobe Character Animator 2025') {
+            popupTitle.textContent = 'Character Animator - Video Proof';
+            popupLinkHigh.href = 'https://drive.google.com/file/d/16nhd9Is7hUs6m_dla9tRtf7w9EksCxSm/view?pli=1';
+            popupLinkLow.href = 'https://drive.google.com/file/d/1osYcekV3UdO73UQnStmB5j1yAhFC6GDk/view';
+            popupLinkTelegram.href = '#';
+            
+        }
+        
+    }
+
+    function closePopup() {
+        popupContainer.classList.add("fade-out");
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+            popupContainer.classList.remove("active", "fade-out");
+            document.body.classList.remove("blur-effect", "fade-out");
+        }, 400);
+    }
+
+    // Close popup if clicked outside the content
+    popupContainer.addEventListener("click", (event) => {
+        if (event.target === popupContainer) {
+            closePopup();
+        }
+    });
+</script>
+
+
+
+
+
+        <!-- Get All Software Section -->
+        <a class="get-all" href="buy_bundle_plans">Buy Bundle Plans</a>
+        
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        /* Default style for mobile (smaller text) */
+        .offer-text p {
+            font-size: 20px;  /* Smaller text for mobile */
+            font-weight: bold;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 769px) {
+            .offer-text p {
+                font-size: 30px;  /* Larger text for desktop */
+            }
+        }
+
+        /* Optional: For very large screens, you can increase font size even more */
+        @media (min-width: 1200px) {
+            .offer-text p {
+                font-size: 40px;  /* Larger text for very big screens */
+            }
+        }
+
+        /* Red color for the 99% text */
+        .offer-text span {
+            color: red;
+        }
+
+        /* Blue color for premium access text */
+        .offer-text .premium-access {
+            color: blue;
+        }
+
+        }
+
+        /* Styling for grid items */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styling for download button */
+        .download-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        /* Download button styling */
+        .download-button {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 0.5rem;
+            text-decoration: none;
+        }
+        
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Downloads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+            gap: 20px; /* Spacing between items */
+            margin: 20px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .software-logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .download-button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .download-button:hover {
+            background-color: blue;
+        }
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* 1 column on small screens */
+            }
+    </style>
+    
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search software..." onkeyup="filterSoftware()">
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+<main>
+    <div class="grid-container" id="softwareContainer">
+        <div class="grid-item" data-software="Adobe Premiere Pro 2025">
+            <img src="premiere-logo.svg" alt="Premiere Pro Logo" class="software-logo">
+            <h3>Adobe Premiere Pro 2025</h3>
+            <div class="price-tag">(Price ₹99)</div>
+            <a class="download-button" href="https://payment.maxado.in/index.php?token=OTl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZjSEpsYldsbGNsOXdZWE56WDNKaGJtUnZiVEE1TmpRMU5qRTFOelV3T0RVd056VTVNakkxTUE9PXx8aHR0cHM6Ly91cGFuZWwub25saW5lL3dpbi9wcmVtaWVyLWxvZ28uc3Zn">Get Password</a>
+            <a class="download-button" href="https://drive.google.com/file/d/1FX4JNCe-wGxiYweYbfs8XSsPjkEQ89Ow/view?usp=drive_link">Download</a>
+            <a class="proof-button" onclick="openPopup('Adobe Premiere Pro 2025')">Installation Steps + Proof Video</a>
+        </div>
+        <div class="grid-item" data-software="Canva Pro">
+            <img src="canvapro-logo.svg" alt="Canva Pro" class="software-logo">
+            <h3>Canva Pro</h3>
+            <div class="price-tag">(Price ₹97)</div>
+            <a class="download-button" href="https://payment.maxado.in/index.php?token=OTd8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5allXNWZkbUZmY0hKdlgzSmhibVJ2YlQxallXNTJZWEJ5WnpVMk5EYz18fGh0dHBzOi8vdXBhbmVsLm9ubGluZS93aW4vY2Fudi1sb2dvLnN2Zw==">Pay</a>
+            <a class="download-button" href="https://wa.me/message/MTTGHMIF7TNSC1" target="_blank">Pay kro & WhatsApp ya Telegram me Screenshot do (Email Login) - Android, iOS, Windows, macOS</a></a>
+        </div>
+        <div class="grid-item" data-software="Adobe After Effects 2025">
+            <img src="aftereffects-logo.svg" alt="After Effects Logo" class="software-logo">
+            <h3>Adobe After Effects 2025</h3>
+            <div class="price-tag">(Price ₹99)</div>
+            <a class="download-button" href="https://payment.maxado.in/index.php?token=OTl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZZV1owWlhKZmNHRnpjMTl5WVc1a2IyMHdNRFkwTlRZeE56VTFNRGd3TURjeU1ESXlOVEE9fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2FmdGVyLWxvZ28uc3Zn">Get Password</a>
+            <a class="download-button" href="https://drive.google.com/file/d/1y33nIWxuKRij_N7jK-PgzxCUNW2DPpdO/view?usp=sharing">Download</a>
+            <a class="proof-button" onclick="openPopup('Adobe After Effects 2025')">Installation Steps + Proof Video</a>
+        </div>
+        <div class="grid-item" data-software="Adobe Photoshop 2025">
+            <img src="photoshop-logo.svg" alt="Photoshop Logo" class="software-logo">
+            <h3>Adobe Photoshop 2025</h3>
+            <div class="price-tag">(Price ₹98)</div>
+            <a class="download-button" href="https://payment.maxado.in/index.php?token=OTh8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZjR2h2ZEc5ZmNHRnpjMTl5WVc1a2IyMDJNVFkwTURZeE56QTFNRGN3TXpjeU1EUTROVEE9fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL3Bob3RvLWxvZ28uc3Zn">Get Password</a>
+            <a class="download-button" href="https://drive.google.com/file/d/1LlqLy34A_nmhkafvv7iOaA-DC534bNKx/view?usp=drive_link">Download</a>
+            <a class="proof-button" onclick="openPopup('Adobe Photoshop 2025')">Installation Steps + Proof Video</a>
+        </div>
+        <div class="grid-item" data-software="Wondershare Filmora 14+Ai">
+            <img src="filmora-logo.svg" alt="Filmora Logo" class="software-logo">
+            <h3>Wondershare Filmora 14+Ai</h3>
+            <div class="price-tag">(Price ₹96)</div>
+            <a class="download-button" href="https://payment.maxado.in/index.php?token=OTZ8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZabWxzYlY5d1lYTnpYM0poYm1SdmJUQXdOakExTmpFeU9URXhPREF3TVRJd01qQTFNQT09fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2ZpbG1vLWxvZ28uc3Zn">Get Password</a>
+            <a class="download-button" href="https://drive.google.com/file/d/1WjzfgAb44AISjKCgd1Ch8tI1zgGH0hd7/view?usp=drive_link">Download</a>
+            <a class="proof-button" onclick="openPopup('Wondershare Filmora 14+Ai')">Installation Steps + Proof Video</a>
+        </div>
+            <div class="grid-item" data-software="Adobe Media Encoder 2025">
+                <img src="mediaencoder-logo.svg" alt="Media Encoder Logo" class
+                    ="software-logo">
+                <h3>Adobe Media Encoder 2025</h3>
+                <div class="price-tag">(Price ₹99)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=OTl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZiV1ZrYVdGZmNHRnpjMTl5WVc1a2IyMHdORFkwTlRBd056VTFPVE01TURjeU1EQXdOVEE9fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL21lZGlhZXItbG9nby5zdmc=">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1d6ppp1CLEQJGK-fi-hPhNuhJDw6IfD54/view?usp=drive_link">Download</a>
+            </div>
+            <div class="grid-item" data-software="Adobe Audition 2025">
+                <img src="audition-logo.svg" alt="Audition Logo" class
+                    ="software-logo">
+                <h3>Adobe Audition 2025</h3>
+                <div class="price-tag">(Price ₹59)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=NTl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZZWFZrYVhScFgzQmhjM05mY21GdVpHOXRNRE0yTkRVNU1EQTFOVEE0TlRBM01qY3lOVFV3fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2F1ZGktbG9nby5zdmc=">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/17m89JG4ZaMT3aHOsf1LT0iD1ES-Bl46U/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe Audition 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Adobe Lightroom 2025">
+                <img src="lightroom-logo.svg" alt="Lightroom Logo" class="software-logo">
+                <h3>Adobe Lightroom 2025</h3>
+                <div class="price-tag">(Price ₹49)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=NDl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZiR2xuYUhSZmNHRnpjMTl5WVc1a2IyMHdNREF3TURBeE56VTVNRGd3TURBd01Ea3lNekE9fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2xpZ2h0LWxvZ28uc3Zn">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1wK6b6ai_pN24jwjmpe62I9pynI_Zln8K/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe Lightroom 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Adobe Illustrator 2025">
+                <img src="illustrator-logo.svg" alt="Illustrator Logo" class="software-logo">
+                <h3>Adobe Illustrator 2025</h3>
+                <div class="price-tag">(Price ₹58)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=NTh8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZhV3hzZFhOMFgzQmhjM05mY21GdVpHOXRPRFEyTkRVMk1EQXdNREF3TURBd01qY3lPVGt3fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2lsbHVzdHItbG9nby5zdmc=">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1PXQ-jYPmmnJUnFmly0Hjeb524_HJyL_c/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe Illustrator 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Adobe inDesign 2025">
+                <img src="indesign-logo.svg" alt="inDesign Logo" class
+                    ="software-logo">
+                <h3>Adobe inDesign 2025</h3>
+                <div class="price-tag">(Price ₹57)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=NTd8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZhVzVrWlY5d1lYTnpYM0poYm1SdmJUTTVOalExTmpBM05UVTJOamd5TnpJd01qQTFNQT09fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2luZGUtbG9nby5zdmc=">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1GN4R_xV8nhi9J7PRamXxD961uZrmTDqu/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe inDesign 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Adobe Animate 2025">
+                <img src="animate-logo.svg" alt="Animate Logo" class
+                   ="software-logo">
+                <h3>Adobe Animate 2025</h3>
+                <div class="price-tag">(Price ₹77)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=Nzd8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZZVzVwYldGMFgzQmhjM05mY21GdVpHOXRPVGsyTkRVM056YzFOVFF3T0RJek5EQXlNRGc0fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2FuaW0tbG9nby5zdmc=">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1LxC7wl-CB7Gc66dDHLw_K9ZaDdTxX0Jh/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe Animate 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Adobe Character Animator 2025">
+                <img src="characteranimator-logo.svg" alt="Character Animator Logo" class
+                   ="software-logo">
+                <h3>Adobe Character Animator 2025</h3>
+                <div class="price-tag">(Price ₹89)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=ODl8fGFIUjBjSE02THk5MWNHRnVaV3d1YjI1c2FXNWxMM2RwYmk5M2FXNWZZMmhoY21GamRHVnlYM0JoYzNOZmNtRnVaRzl0T1RrMk5EVTNOemMxTlRRd09ESXpOREF5TURnNFltaG9hblY1fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2NoYXJhY3Rlci1sb2dvLnN2Zw==">Get Password</a>
+                <a class="download-button" href="https://drive.google.com/file/d/1knfP0H_xyUGVdfizX2R350Qr-qc77HQ7/view?usp=drive_link">Download</a>
+                <a class="proof-button" onclick="openPopup('Adobe Character Animator 2025')">Installation Steps + Proof Video</a>
+            </div>
+            <div class="grid-item" data-software="Demo Payment Test ₹1">
+                <img src="demo-logo.svg" alt="Demo Logo" class
+                   ="software-logo">
+                <h3>Demo Payment Test ₹1</h3>
+                <div class="price-tag">(Price ₹1)</div>
+                <a class="download-button" href="https://payment.maxado.in/index.php?token=MXx8YUhSMGNITTZMeTkxY0dGdVpXd3ViMjVzYVc1bEwzZHBiaTlrWlcxdlgzUmxjM1E9fHxodHRwczovL3VwYW5lbC5vbmxpbmUvd2luL2RlbW8tbG9nby5zdmc=">Payment Test</a>
+                <a class="download-button" href="#">Download</a>
+                <a class="proof-button" onclick="openPopup('Demo')">Installation Steps + Proof Video</a>
+            </div>
+        </div>
+    </main>
+
+<!-- WhatsApp and Telegram social icons -->
+    <div class="social-icons">
+        <a href="https://wa.me/message/MTTGHMIF7TNSC1" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://t.me/Its_Maxado" target="_blank"><img src="telegram.webp" alt="Telegram"></a>
+    </div>
+</body>
+</html>
+
+    <script>
+        function filterSoftware() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let softwareItems = document.getElementsByClassName('grid-item');
+
+            for (let i = 0; i < softwareItems.length; i++) {
+                let softwareName = softwareItems[i].getAttribute('data-software').toLowerCase();
+                if (softwareName.includes(input)) {
+                    softwareItems[i].style.display = "";
+                } else {
+                    softwareItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
